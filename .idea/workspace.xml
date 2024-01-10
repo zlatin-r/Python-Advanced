@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad0c4cb-ae39-4a41-a1b1-7c7c5cf57741" name="Changes" comment="Solution to the task">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lists as Stacks and Queues/03.supermarket.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lists as Stacks and Queues/03.supermarket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lists as Stacks and Queues/04.water_dispenser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Python.01.reverse_string.executor": "Run",
     "Python.02.matching_parentheses.executor": "Run",
+    "Python.03.supermarket.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -53,7 +53,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.03.supermarket">
+  <component name="RunManager" selected="Python.04.water_dispenser">
     <configuration name="02.matching_parentheses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SoftUni-Python-Advanced-2024" />
       <option name="ENV_FILES" value="" />
@@ -100,8 +100,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="04.water_dispenser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SoftUni-Python-Advanced-2024" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lists as Stacks and Queues" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lists as Stacks and Queues/04.water_dispenser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.04.water_dispenser" />
         <item itemvalue="Python.03.supermarket" />
         <item itemvalue="Python.02.matching_parentheses" />
       </list>
@@ -125,7 +149,7 @@
       <workItem from="1704879356060" duration="121000" />
       <workItem from="1704892268342" duration="360000" />
       <workItem from="1704892628870" duration="92000" />
-      <workItem from="1704892729143" duration="1102000" />
+      <workItem from="1704892729143" duration="1822000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -199,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704893325381</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Solution to the task">
+      <option name="closed" value="true" />
+      <created>1704894086214</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704894086214</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,8 +243,19 @@
     <MESSAGE value="Solution to the task" />
     <option name="LAST_COMMIT_MESSAGE" value="Solution to the task" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Lists as Stacks and Queues/03.supermarket.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftUni_Python_Advanced_2024$03_supermarket.coverage" NAME="03.supermarket Coverage Results" MODIFIED="1704893973584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lists as Stacks and Queues" />
+    <SUITE FILE_PATH="coverage/SoftUni_Python_Advanced_2024$03_supermarket.coverage" NAME="03.supermarket Coverage Results" MODIFIED="1704894060260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lists as Stacks and Queues" />
     <SUITE FILE_PATH="coverage/SoftUni_Python_Advanced_2024$02_matching_parentheses.coverage" NAME="02.matching_parentheses Coverage Results" MODIFIED="1704893264685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lists as Stacks and Queues" />
     <SUITE FILE_PATH="coverage/SoftUni_Python_Advanced_2024$01_reverse_string.coverage" NAME="01.reverse_string Coverage Results" MODIFIED="1704892506780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lists as Stacks and Queues" />
   </component>
