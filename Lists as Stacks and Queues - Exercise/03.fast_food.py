@@ -6,9 +6,11 @@ orders = deque(int(x) for x in input().split())
 print(max(orders))
 
 while orders:
-    if food_quantity >= orders[0]:
-        food_quantity -= orders.popleft()
+    order = orders.popleft()
+    if food_quantity >= order:
+        food_quantity -= order
     else:
+        orders.appendleft(order)
         break
 
 if len(orders) > 0:
