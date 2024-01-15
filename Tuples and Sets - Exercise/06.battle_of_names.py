@@ -14,11 +14,8 @@ for i in range(1, n + 1):
         evens.add(total)
 
 if sum(odds) == sum(evens):
-    union = odds.union(evens)
-    print(", ".join(map(str, union)))
+    print(", ".join(map(str, odds.union(evens))))
 elif sum(odds) > sum(evens):
-    difference = odds - evens
-    print(", ".join(map(str, difference)))
+    print(", ".join(map(str, odds.difference(evens))))
 else:
-    sym_difference = odds.symmetric_difference(evens)
-    print(", ".join(map(str, sym_difference)))
+    print(", ".join(map(str, odds.symmetric_difference(evens))))
