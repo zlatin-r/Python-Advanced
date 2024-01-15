@@ -3,13 +3,12 @@ evens = set()
 
 for i in range(1, int(input()) + 1):
 
-    ascii_sum = sum(ord(x) for x in input())
-    total = ascii_sum // i
+    ascii_sum = sum(ord(x) for x in input()) // i
 
-    if total % 2 != 0:
-        odds.add(total)
+    if ascii_sum % 2 != 0:
+        odds.add(ascii_sum)
     else:
-        evens.add(total)
+        evens.add(ascii_sum)
 
 if sum(odds) == sum(evens):
     print(", ".join(map(str, odds.union(evens))))
