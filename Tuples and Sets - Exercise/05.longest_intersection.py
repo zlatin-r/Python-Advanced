@@ -10,7 +10,7 @@ for i in range(n):
     intersect_start = max(first_range[0], second_range[0])
     intersect_end = min(first_range[1], second_range[1])
 
-    intersection = list(range(intersect_start, intersect_end+1))
+    intersection = list(range(intersect_start, intersect_end + 1))
 
     if len(intersection) > len(longest_intersection):
         longest_intersection = intersection
