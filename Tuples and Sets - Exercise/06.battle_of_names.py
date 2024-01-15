@@ -2,7 +2,6 @@ odds = set()
 evens = set()
 
 for i in range(1, int(input()) + 1):
-
     ascii_sum = sum(ord(x) for x in input()) // i
 
     if ascii_sum % 2 != 0:
