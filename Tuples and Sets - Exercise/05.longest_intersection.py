@@ -4,6 +4,7 @@ longest_intersection = ''
 
 for i in range(n):
     first_range, second_range = input().split('-')
+
     first_range = list(map(int, first_range.split(',')))
     second_range = list(map(int, second_range.split(',')))
 
