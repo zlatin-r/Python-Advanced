@@ -1,9 +1,7 @@
-n = int(input())
 table = set()
 
-for _ in range(n):
-    element = input().split()
-    for i in element:
+for _ in range(int(input())):
+    for i in input().split():
         table.add(i)
 
 for el in table:
