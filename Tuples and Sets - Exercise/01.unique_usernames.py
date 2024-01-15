@@ -6,4 +6,7 @@ for _ in range(n):
     names.add(username)
 
 for name in names:
-    print(name)
+    print(name)            # print(*names, sep="\n")
+
+
+# print(*{input for _ in range(int(input)))}, sep = '\n')
