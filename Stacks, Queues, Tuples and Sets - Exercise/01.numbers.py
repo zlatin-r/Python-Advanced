@@ -9,7 +9,7 @@ for _ in range(int(input())):
 
     if action == "Add First":
         for x in numbers:
-            first_sequence.add(x)
+            first_sequence.add(x)  # [first_set.add(x) for x in numbers]
     elif action == "Add Second":
         for x in numbers:
             second_sequence.add(x)
@@ -20,8 +20,5 @@ for _ in range(int(input())):
     elif action == "Check Subset":
         print(first_sequence.issubset(second_sequence) or second_sequence.issubset(first_sequence))
 
-first_sequence = sorted(first_sequence)
-second_sequence = sorted(second_sequence)
-
-print(*first_sequence, sep=", ")
-print(*second_sequence, sep=", ")
+print(*sorted(first_sequence), sep=", ")
+print(*sorted(second_sequence), sep=", ")
