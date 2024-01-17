@@ -47,10 +47,7 @@ else:
     print("No presents this Christmas!")
 
 if materials:
-    start = materials.pop()
-    end = materials.popleft()
-    full = start, *materials, end
-    print("Materials left:", ", ".join(map(str, full)))
+    print("Materials left:", ", ".join(map(str, materials[::-1])))
 
 if magic:
     print("Magic left:", ", ".join(map(str, magic)))
