@@ -17,6 +17,7 @@ while (chocolate and milk) and shakes_count != 5:
     elif curr_milk <= 0:
         chocolate.append(curr_chocolate)
         continue
+
     if curr_chocolate == curr_milk:
         shakes_count += 1
     else:
@@ -27,11 +28,6 @@ if shakes_count == 5:
     print("Great! You made all the chocolate milkshakes needed!")
 else:
     print("Not enough milkshakes.")
-if chocolate:
-    print("Chocolate:", ", ".join(map(str, chocolate)))
-else:
-    print("Chocolate: empty")
-if milk:
-    print("Milk:", ", ".join(map(str, milk)))
-else:
-    print("Milk: empty")
+
+print(f"Chocolate: {', '.join(str(x) for x in chocolate) or 'empty'}")
+print(f"Milk: {', '.join(str(x) for x in milk) or 'empty'}")
