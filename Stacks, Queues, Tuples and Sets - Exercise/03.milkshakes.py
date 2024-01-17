@@ -9,13 +9,15 @@ while (chocolate and milk) and shakes_count != 5:
     curr_chocolate = chocolate.pop()
     curr_milk = milk.popleft()
 
-    if curr_chocolate <= 0:
+    if curr_chocolate <= 0 and curr_chocolate == curr_milk:
+        continue
+    elif curr_chocolate <= 0:
         milk.appendleft(curr_milk)
         continue
     elif curr_milk <= 0:
         chocolate.append(curr_chocolate)
         continue
-    elif curr_chocolate == curr_milk:
+    if curr_chocolate == curr_milk:
         shakes_count += 1
     else:
         milk.append(curr_milk)
