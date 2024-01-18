@@ -8,7 +8,7 @@ presents = {
     150: "Doll",
     250: "Wooden train",
     300: "Teddy bear",
-    400: "Bicycle"
+    400: "Bicycle",
 }
 
 while materials and magic_levels:
@@ -27,15 +27,15 @@ while materials and magic_levels:
     elif product > 0:
         materials.append(material + 15)
 
-    if {"Doll", "Wooden train"}.issubset(crafted) or {"Teddy bear", "Bicycle"}.issubset(crafted):
-        print("The presents are crafted! Merry Christmas!")
-    else:
-        print("No presents this Christmas!")
+if {"Doll", "Wooden train"}.issubset(crafted) or {"Teddy bear", "Bicycle"}.issubset(crafted):
+    print("The presents are crafted! Merry Christmas!")
+else:
+    print("No presents this Christmas!")
 
-    if materials:
-        print(f"Materials left: {', '.join(str(x) for x in materials[::-1])}")
+if materials:
+    print(f"Materials left: {', '.join(str(x) for x in materials[::-1])}")
 
-    if magic_levels:
-        print(f"Magic left: {', '.join(str(x) for x in magic_levels)}")
+if magic_levels:
+    print(f"Magic left: {', '.join(str(x) for x in magic_levels)}")
 
-    [print(f"{toy}: {crafted.count(toy)}") for toy in sorted(set(crafted))]
+[print(f"{toy}: {crafted.count(toy)}") for toy in sorted(set(crafted))]
