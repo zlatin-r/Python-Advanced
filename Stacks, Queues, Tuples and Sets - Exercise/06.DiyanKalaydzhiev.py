@@ -1,21 +1,31 @@
 from collections import deque
 
-substrings = deque(input().split())
-mid_index = len(substrings) // 2
-main_colors = "red", "yellow", "blue"
-secondary_colors = "orange", "purple", "green"
+words = deque(input().split())  # d yel blu e low redd
 
-left_string = substrings.popleft()
-right_string = substrings.pop()
+colors = {"red", "yellow", "blue", "purple", "orange", "green"}
+req_colors = {
+    "orange": {"red", "yellow"},
+    "purple": {"blue", "red"},
+    "green": {"yellow", "blue"},
+}
 
-string = left_string + right_string
+result = []
 
-if string not in main_colors and string not in secondary_colors:
-    left_part = substrings[:mid_index]
-    right_part = substrings[mid_index:]
-    substrings = deque()
-    substrings.append(left_part)
-    substrings.append(string)
-    substrings.append(right_part)
+while words:
+    first_word = words.popleft()
+    second_word = words.pop() if words else ''
 
-print(substrings)
+    for color in (first_word + second_word, second_word + first_word):
+        if color in colors:
+            result.append(color)
+            break
+    else:
+        for el in (first_word[:-1], second_word[:-1]):  # 'd' 'redd' -> '', 'red'
+            if el:
+                words.insert(len(words) // 2, el)
+
+for color in set(req_colors.keys()).intersection(result):
+    if not req_colors[color].issubset(result):
+        result.remove(color)
+
+print(result)
