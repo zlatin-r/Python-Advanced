@@ -11,7 +11,6 @@ for i in range(len(matrix)):
     primary_diagonal.append(matrix[i][i])
 
 for j in range(len(matrix)):
-    diagonal_el = matrix[j][n - 1]
     secondary_diagonal.append(matrix[j][n - 1])
     n -= 1
 
