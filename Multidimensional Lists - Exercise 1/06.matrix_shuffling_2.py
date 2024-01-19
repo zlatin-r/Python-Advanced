@@ -11,7 +11,8 @@ while command != "END":
     action = command[0]
     data = [int(x) for x in command[1:] if x.isnumeric()]
 
-    if ((action != "swap" or len(data) != 4 or
+    if ((action != "swap" or
+            len(data) != 4 or
             not {data[0], data[2]}.issubset(valid_rows)) or
             not {data[1], data[2]}.issubset(valid_columns)):
         print("Invalid input!")
