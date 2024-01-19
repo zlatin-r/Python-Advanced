@@ -1,11 +1,8 @@
 rows, columns = [int(x) for x in input().split()]
+matrix = [[int(x) for x in input().split()] for _ in range(rows)]
 
-matrix = []
 sub_matrix = []
 max_sum = float('-inf')
-
-for _ in range(rows):
-    matrix.append([int(x) for x in input().split()])
 
 for row in range(rows - 2):
     for col in range(columns - 2):
@@ -23,6 +20,7 @@ for row in range(rows - 2):
         sub_matrix_sum = (up_left + up_mid + up_right +
                           mid_left + mid_mid + mid_right +
                           down_left + down_mid + down_right)
+
         if sub_matrix_sum > max_sum:
             max_sum = sub_matrix_sum
             sub_matrix = [[up_left, up_mid, up_right],
