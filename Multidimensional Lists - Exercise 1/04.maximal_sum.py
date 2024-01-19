@@ -28,6 +28,5 @@ for row in range(rows - 2):
                           [down_left, down_mid, down_right]]
 
 print(f"Sum = {max_sum}")
-print(*sub_matrix[0])
-print(*sub_matrix[1])
-print(*sub_matrix[2])
+for row in sub_matrix:
+    print(*row)
