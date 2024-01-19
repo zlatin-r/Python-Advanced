@@ -15,4 +15,4 @@ for i in range(rows):
     if i % 2 == 1:
         matrix[i].reverse()
 
-[print(*row) for row in matrix]
+[print("".join(row)) for row in matrix]
