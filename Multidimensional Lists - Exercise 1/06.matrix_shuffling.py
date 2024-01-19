@@ -1,9 +1,5 @@
 rows, columns = [int(x) for x in input().split()]
-
-matrix = []
-
-for _ in range(rows):
-    matrix.append([x for x in input().split()])
+matrix = [[x for x in input().split()] for _ in range(rows)]
 
 command = input()
 
@@ -24,14 +20,11 @@ while command != "END":
            data[3] < 0)):
         print("Invalid input!")
     else:
-        from_row = data[0]
-        from_col = data[1]
-        to_row = data[2]
-        to_col = data[3]
+        from_row, from_col = data[0], data[1]
+        to_row, to_col = data[2], data[3]
 
         matrix[from_row][from_col], matrix[to_row][to_col] = matrix[to_row][to_col], matrix[from_row][from_col]
 
-        for row in matrix:
-            print(*row)
+        [print(*row) for row in matrix]
 
     command = input()
