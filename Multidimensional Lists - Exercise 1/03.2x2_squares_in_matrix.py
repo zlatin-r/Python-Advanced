@@ -1,10 +1,7 @@
 rows, columns = [int(x) for x in input().split()]
 
-matrix = []
+matrix = [input().split() for _ in range(rows)]
 counter = 0
-
-for _ in range(rows):
-    matrix.append([str(x) for x in input().split()])
 
 for row in range(rows - 1):
     for col in range(columns - 1):
