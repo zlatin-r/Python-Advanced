@@ -11,9 +11,9 @@ for _ in range(rows):
 for i in range(rows):
     for j in range(columns):
 
-        current_snake = snake.popleft()
-        matrix[i][j] = current_snake
-        snake.append(current_snake)
+        curr_snake_el = snake.popleft()
+        matrix[i][j] = curr_snake_el
+        snake.append(curr_snake_el)
 
     if i % 2 == 1:
         matrix[i].reverse()
