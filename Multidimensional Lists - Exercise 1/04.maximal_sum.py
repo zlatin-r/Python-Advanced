@@ -28,5 +28,4 @@ for row in range(rows - 2):
                           [down_left, down_mid, down_right]]
 
 print(f"Sum = {max_sum}")
-for row in sub_matrix:
-    print(*row)
+[print(*row) for row in sub_matrix]
