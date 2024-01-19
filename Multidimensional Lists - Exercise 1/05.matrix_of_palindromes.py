@@ -11,5 +11,4 @@ for row_idx in range(rows):
     matrix.append(row)
     columns += 1
 
-for i in matrix:
-    print(*i)
+[print(*i) for i in matrix]
