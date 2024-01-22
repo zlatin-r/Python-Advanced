@@ -2,7 +2,7 @@ n = int(input())
 
 matrix = [[int(x) for x in input().split()] for _ in range(n)]
 coordinates = ((int(x) for x in c.split(",")) for c in input().split())
-              # 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] => ((1, 2), (3, 4), (5, 6))
+# 1,2  3,4  5,6 => ["1,2", "3,4", "5, 6"] => ((1, 2), (3, 4), (5, 6))
 
 directions = (
     (-1, 0),    # up
