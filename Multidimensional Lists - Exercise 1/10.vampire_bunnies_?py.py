@@ -2,7 +2,7 @@ rows, cols = [int(x) for x in input().split()]
 matrix = [[x for x in input()] for _ in range(rows)]
 commands = input()
 
-winner, movement = False, {
+wins, movement = False, {
     "U": [-1, 0], "D": [1, 0], "L": [0, -1], "R": [0, 1]
 }
 
@@ -19,7 +19,7 @@ def player_alive(row, col):
 
 
 def check_valid_index(row, col, player=False):
-    global winner
+    global wins
     if 0 <= row < rows and 0 <= col < cols:
         return True
     if player:
@@ -58,7 +58,7 @@ for command in commands:
     if check_valid_index(player_movement_row, player_movement_col, True):
         player_row, player_col = player_movement_row, player_movement_col
     bunnies_moves(bunnies_position())
-    if winner:
+    if wins:
         show_result()
     if check_valid_index(player_movement_row, player_movement_col):
         player_alive(player_movement_row, player_movement_col)
