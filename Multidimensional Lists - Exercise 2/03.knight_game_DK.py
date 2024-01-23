@@ -20,6 +20,7 @@ while True:
 
     for row in range(size):
         for col in range(size):
+
             if matrix[row][col] == "K":
                 attack = 0
 
