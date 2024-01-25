@@ -1,7 +1,7 @@
 def multiply(*args):
     result = 1
 
-    for arg in args:
-        result *= arg
+    for num in args:
+        result *= num
 
     return result
