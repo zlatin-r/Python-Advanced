@@ -7,8 +7,7 @@ def even_odd_filter(**kwargs):
         else:
             result[key] = [int(x) for x in value if x % 2 == 1]
 
-    sorted_result = sorted(result.items(), key=lambda x: -len(x[1]))
-    return dict(sorted_result)
+    return dict(sorted(result.items(), key=lambda x: -len(x[1])))
 
 
 print(even_odd_filter(
