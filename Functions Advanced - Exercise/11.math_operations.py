@@ -15,7 +15,7 @@ def math_operations(*args, **kwargs):
                 elif k == "s":
                     kwargs[k] = v - current_number
                 elif k == "d":
-                    if current_number != 0 and v != 0:
+                    if current_number != 0:
                         kwargs[k] = v / current_number
                 elif k == "m":
                     kwargs[k] = v * current_number
