@@ -5,10 +5,11 @@ def math_operations(*args, **kwargs):
     numbers = deque(args)
 
     while numbers:
-
         for k, v in kwargs.items():
+
             if numbers:
                 current_number = numbers.popleft()
+
                 if k == "a":
                     kwargs[k] = current_number + v
                 elif k == "s":
@@ -20,6 +21,7 @@ def math_operations(*args, **kwargs):
                     kwargs[k] = v * current_number
 
     kwargs = sorted(kwargs.items(), key=lambda x: (-x[1], x[0]))
+
     return "\n".join(f"{k}: {v:.1f}" for k, v in kwargs)
 
 
