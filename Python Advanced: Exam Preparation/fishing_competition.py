@@ -16,6 +16,7 @@ for row in range(SIZE):
 
     if "S" in fishing_area[row]:
         ship_pos = row, fishing_area[row].index("S")
+        fishing_area[ship_pos[0]][ship_pos[1]] = "-"
 
 command = input()
 while command != "collect the nets":
@@ -34,17 +35,19 @@ while command != "collect the nets":
         c = SIZE - 1
 
     if fishing_area[r][c].isdigit():
-        collected_fish = int(fishing_area[r][c])
+        collected_fish += int(fishing_area[r][c])
     elif fishing_area[r][c] == "W":
         print(f"You fell into a whirlpool! The ship sank and you lost the fish you caught. "
-              f"Last coordinates of the ship: {[r, c]}")
+              f"Last coordinates of the ship: {[r,c]}")
         exit()
 
-    # fishing_area[r][c] = "x"
-    # [print(*fishing_area) for fishing_area in fishing_area]
+    fishing_area[r][c] = "-"
 
     ship_pos = r, c
     command = input()
+
+
+fishing_area[ship_pos[0]][ship_pos[1]] = "S"
 
 if collected_fish >= 20:
     print("Success! You managed to reach the quota!")
@@ -54,4 +57,5 @@ else:
 
 if collected_fish:
     print(f"Amount of fish caught: {collected_fish} tons.")
-[print(*row) for row in fishing_area]
+
+[print("".join(row)) for row in fishing_area]
