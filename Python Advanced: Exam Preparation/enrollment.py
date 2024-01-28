@@ -1,16 +1,16 @@
-def gather_credits(credits, *args):
+def gather_credits(credits_needed, *args):
     enrolled = []
     collected_credits = 0
 
     for arg in args:
-        if arg[0] not in enrolled and credits > collected_credits:
+        if arg[0] not in enrolled and credits_needed > collected_credits:
             collected_credits += int(arg[1])
             enrolled.append(arg[0])
 
-    if collected_credits >= credits:
-        return f"Enrollment finished! Maximum credits: {collected_credits}.Courses: {', '.join(sorted(enrolled))}"
+    if collected_credits >= credits_needed:
+        return f"Enrollment finished! Maximum credits: {collected_credits}.\nCourses: {', '.join(sorted(enrolled))}"
     else:
-        return f"You need to enroll in more courses! You have to gather {credits - collected_credits} credits more."
+        return f"You need to enroll in more courses! You have to gather {credits_needed - collected_credits} credits more."
 
 
 print(gather_credits(
