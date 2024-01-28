@@ -46,7 +46,6 @@ while command != "collect the nets":
     ship_pos = r, c
     command = input()
 
-
 fishing_area[ship_pos[0]][ship_pos[1]] = "S"
 
 if collected_fish >= 20:
@@ -55,7 +54,7 @@ else:
     fish_needed = 20 - collected_fish
     print(f"You didn't catch enough fish and didn't reach the quota! You need {fish_needed} tons of fish more.")
 
-if collected_fish > 0:
+if collected_fish:
     print(f"Amount of fish caught: {collected_fish} tons.")
 
 [print("".join(row)) for row in fishing_area]
