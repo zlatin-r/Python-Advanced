@@ -38,7 +38,7 @@ while command != "collect the nets":
         collected_fish += int(fishing_area[r][c])
     elif fishing_area[r][c] == "W":
         print(f"You fell into a whirlpool! The ship sank and you lost the fish you caught. "
-              f"Last coordinates of the ship: {[r,c]}")
+              f"Last coordinates of the ship: [{r},{c}]")
         exit()
 
     fishing_area[r][c] = "-"
@@ -55,7 +55,7 @@ else:
     fish_needed = 20 - collected_fish
     print(f"You didn't catch enough fish and didn't reach the quota! You need {fish_needed} tons of fish more.")
 
-if collected_fish:
+if collected_fish > 0:
     print(f"Amount of fish caught: {collected_fish} tons.")
 
 [print("".join(row)) for row in fishing_area]
