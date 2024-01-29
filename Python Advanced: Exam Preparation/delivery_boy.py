@@ -34,6 +34,7 @@ while True:
         elif field[r][c] == "A":
             field[r][c] = "P"
             print("Pizza is delivered on time! Next order...")
+            field[start_pos[0]][start_pos[1]] = "B"
             break
         else:
             field[r][c] = "."
