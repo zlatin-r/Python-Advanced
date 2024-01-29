@@ -44,8 +44,6 @@ if not altitudes_with_values:
     print("John has reached all the altitudes and managed to reach the top!")
 else:
     print("John failed to reach the top.")
-    if reached_altitudes:
-        print("Reached altitudes: ", end="")
-        print(", ".join(reached_altitudes))
-    else:
-        print("John didn't reach any altitude.")
+    print(f"Reached altitudes: {', '.join(reached_altitudes)}" if reached_altitudes else
+          "John didn't reach any altitude.")
+
