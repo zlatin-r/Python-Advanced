@@ -17,6 +17,7 @@ for row in range(rows):
 
     if "B" in field[row]:
         r, c = row, field[row].index("B")
+        field[r][c] = "-"
 
 command = input()
 while command != "Finish":
