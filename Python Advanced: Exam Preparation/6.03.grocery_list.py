@@ -1,5 +1,4 @@
-def shop_from_grocery_list(money, grocery, *prod_price):
-    budget = money
+def shop_from_grocery_list(budget, grocery, *prod_price):
     purchased_products = []
 
     for product, price in prod_price:
