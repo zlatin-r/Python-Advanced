@@ -18,12 +18,6 @@ def shop_from_grocery_list(money, grocery, *prod_price):
 
     return f"You did not buy all the products. Missing products: {', '.join(rest_products)}."
 
-    # for product in grocery:
-    #     if product not in purchased_products:
-    #         result.append(product)
-    #
-    # return f"You did not buy all the products. Missing products: {', '.join(result)}."
-
 
 print(shop_from_grocery_list(
     100,
