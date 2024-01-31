@@ -1,7 +1,6 @@
 def accommodate_new_pets(capacity, max_weight, *animal_data):
     accommodated_pets = {}
     passed_animals = []
-    result = ""
 
     for animal_type, weight in animal_data:
         if weight <= max_weight and capacity > 0:
@@ -13,15 +12,13 @@ def accommodate_new_pets(capacity, max_weight, *animal_data):
             accommodated_pets[animal] = 0
         accommodated_pets[animal] += 1
 
-    sorted(accommodated_pets.items())
-
-    if capacity == 0 and len(accommodated_pets) > len(animal_data):
+    if len(passed_animals) == sum(accommodated_pets.values()):
         result = f"All pets are accommodated! Available capacity: {capacity}.\n"
     else:
         result = "You did not manage to accommodate all pets!\n"
     result += "Accommodated pets:\n"
 
-    for k, v in accommodated_pets.items():
+    for k, v in sorted(accommodated_pets.items()):
         result += f"{k}: {v}\n"
 
     return result
