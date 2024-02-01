@@ -19,6 +19,7 @@ for row in range(SIZE):
         battle_field[r][c] = "-"
 
 command = input()
+
 while True:
 
     r += directions[command][0]
@@ -40,6 +41,7 @@ while True:
             break
 
     battle_field[r][c] = "-"
+
     command = input()
 
 battle_field[r][c] = "S"
