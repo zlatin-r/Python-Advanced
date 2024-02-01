@@ -1,7 +1,7 @@
 def students_credits(*info):
     courses = {}
     total_credits = 0
-    result = []
+    result = ""
 
     for data in info:
         course_name, course_credits, max_points, diyans_points = data.split("-")
@@ -12,14 +12,14 @@ def students_credits(*info):
         courses[course_name] = points
 
     if total_credits >= 240:
-        result.append(f"Diyan gets a diploma with {total_credits:.1f} credits.")
+        result += f"Diyan gets a diploma with {total_credits:.1f} credits.\n"
     else:
-        result.append(f"Diyan needs {240 - total_credits:.1f} credits more for a diploma.")
+        result += f"Diyan needs {240 - total_credits:.1f} credits more for a diploma.\n"
 
     for course, points in sorted(courses.items(), key=lambda x: -x[1]):
-        result.append(f"{course} - {float(points):.1f}")
+        result += f"{course} - {float(points):.1f}\n"
 
-    return "\n".join(result)
+    return result
 
 
 print(
