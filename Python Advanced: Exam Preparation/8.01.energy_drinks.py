@@ -1,12 +1,12 @@
 from collections import deque
 
-caffeine = [int(x) for x in input().split(", ")]
+milligrams_caffeine = [int(x) for x in input().split(", ")]
 drinks = deque(int(x) for x in input().split(", "))
 
 stamats_caffeine = 0
 
-while drinks and caffeine:
-    curr_caffeine = caffeine.pop()
+while drinks and milligrams_caffeine:
+    curr_caffeine = milligrams_caffeine.pop()
     curr_drink = drinks.popleft()
 
     caffeine = curr_drink * curr_caffeine
