@@ -1,6 +1,6 @@
 import os
 
 try:
-    os.remove('text.txt')
+    os.remove('resources/text.txt')
 except FileNotFoundError:
     print("File already deleted!")

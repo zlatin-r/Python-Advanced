@@ -1,4 +1,4 @@
-numbers_file = open("numbers.txt", "r")
+numbers_file = open("resources/numbers.txt", "r")
 sum_lines = 0
 
 for line in numbers_file:
