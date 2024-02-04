@@ -1,3 +1,6 @@
 import os
 
-os.remove('text.txt')
+try:
+    os.remove('text.txt')
+except FileNotFoundError:
+    print("File already deleted!")
