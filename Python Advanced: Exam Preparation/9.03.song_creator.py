@@ -4,9 +4,11 @@ def add_songs(*input_data):
 
     for data in input_data:
         song_name, lyrics = data[0], data[1]
+
         if song_name not in songs:
             songs[song_name] = lyrics
         else:
+
             if lyrics:
                 songs[song_name].extend(lyrics)
 
