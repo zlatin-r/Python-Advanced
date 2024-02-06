@@ -23,7 +23,7 @@ except FileNotFoundError:
 
 extensions = sorted(extensions.items(), key=lambda x: x[0])
 
-for extension, files in extensions:  # extension => py, files => [one.py, two.py]...
+for extension, files in extensions:
     result.append(f".{extension}")
 
     for file in sorted(files):
