@@ -13,7 +13,7 @@ def save_extensions(dir_name, first_level=False):
 
 
 directory = input("Enter a directory: ")
-extensions = {}  # [py: [python.py, hello.py], ...}
+extensions = {}
 result = []
 
 try:
