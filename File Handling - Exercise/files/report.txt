@@ -15,3 +15,5 @@
 .ts
 - - - file_1_level_1.ts
 - - - file_3.ts
+.txt
+- - - report.txt
