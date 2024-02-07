@@ -25,6 +25,7 @@ def shopping_cart(*args):
     for items in sorted_data:
         meal_type, products = items
         result += f"{meal_type}:\n"
+
         for item in sorted(products):
             result += f" - {item}\n"
 
