@@ -33,21 +33,20 @@ for command in commands:
     if c < 0:
         c = 5
 
-    if 0 <= r < 6 and 0 <= c < 6:
-        position_symbol = matrix[r][c]
+    position_symbol = matrix[r][c]
 
-        if position_symbol == "W":
-            print(f"Water deposit found at ({r}, {c})")
-            water_found = True
-        elif position_symbol == "M":
-            print(f"Metal deposit found at ({r}, {c})")
-            metal_found = True
-        elif position_symbol == "C":
-            print(f"Concrete deposit found at ({r}, {c})")
-            concrete_found = True
-        elif position_symbol == "R":
-            print(f"Rover got broken at ({r}, {c})")
-            break
+    if position_symbol == "W":
+        print(f"Water deposit found at ({r}, {c})")
+        water_found = True
+    elif position_symbol == "M":
+        print(f"Metal deposit found at ({r}, {c})")
+        metal_found = True
+    elif position_symbol == "C":
+        print(f"Concrete deposit found at ({r}, {c})")
+        concrete_found = True
+    elif position_symbol == "R":
+        print(f"Rover got broken at ({r}, {c})")
+        break
 
 if all([water_found, metal_found, concrete_found]):
     print("Area suitable to start the colony.")
