@@ -47,7 +47,6 @@ while command != "End":
         col_pos += directions[direction][1]
 
         row_pos, col_pos = row_col_pos_checker(row_pos, col_pos)
-
         current_position = field[row_pos][col_pos]
 
         if current_position == "D":
