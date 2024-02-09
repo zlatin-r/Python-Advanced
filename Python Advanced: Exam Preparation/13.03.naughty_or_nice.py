@@ -4,18 +4,16 @@ def naughty_or_nice_list(kids: list, *args, **kwargs):
     nice_kids = []
     not_found_kids = []
 
-    if args:
-        for arg in args:
-            num, behavior = arg.split('-')
-            record = tuple(f"{int(num)}-{behavior}")
-
-            if kids.count(record) == 1:
-                pass
+    for arg in args:
+        num, behavior = arg.split('-')
+        if kids.count(int(num)) > 1:
+            pass
 
 
 print(naughty_or_nice_list(
     [
         (3, "Amy"),
+        (1, "Tom"),
         (1, "Tom"),
         (7, "George"),
         (3, "Katy"),
