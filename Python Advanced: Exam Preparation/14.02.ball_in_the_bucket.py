@@ -1,5 +1,4 @@
 SIZE = 6
-
 board = []
 
 scored_points = 0
