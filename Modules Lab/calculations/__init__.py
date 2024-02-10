@@ -1,18 +1,16 @@
-def divide(num1, num2):
-    return num1 / num2
+def math_operations(expression):
+    num1, sign, num2 = expression.split()
+    result = 0
 
+    if sign == "/":
+        result = float(num1) / int(num2)
+    elif sign == "*":
+        result = float(num1) * int(num2)
+    elif sign == "-":
+        result = float(num1) - int(num2)
+    elif sign == "+":
+        result = float(num1) + int(num2)
+    elif sign == "^":
+        result = float(num1) ** int(num2)
 
-def multiply(num1, num2):
-    return num1 * num2
-
-
-def subtract(num1, num2):
-    return num1 - num2
-
-
-def addition(num1, num2):
-    return num1 + num2
-
-
-def power(num1, num2):
-    return num1 ** num2
+    return print(f"{result:.2f}")
