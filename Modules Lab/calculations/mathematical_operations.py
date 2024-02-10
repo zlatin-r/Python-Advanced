@@ -1,4 +1,4 @@
-from calculations import math_operations
+from core import math_operations
 
 expression = input()
 
