@@ -1,9 +1,9 @@
 SIZE = 6
 
+board = []
+
 scored_points = 0
 prices = []
-
-board = []
 
 for _ in range(SIZE):
     board.append(input().split())
