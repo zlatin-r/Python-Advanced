@@ -8,13 +8,14 @@ for _ in range(SIZE):
     board.append(input().split())
 
 for throw in range(3):
-    coordinates = input().strip("(").strip(")").split(",")
-    r = int(coordinates[0])
-    c = int(coordinates[1])
+
+    r, c = map(int, input().strip("(").strip(")").split(","))
 
     if 0 <= r < SIZE and 0 <= c < SIZE:
+
         if board[r][c] == "B":
             board[r][c] = 0
+
             for i in range(SIZE):
                 scored_points += int(board[i][c])
 
