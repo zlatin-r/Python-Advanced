@@ -4,6 +4,7 @@ effects = deque(int(x) for x in input().split(', '))
 explosive_power = [int(x) for x in input().split(', ')]
 
 fireworks = {"Palm Fireworks": 0, "Willow Fireworks": 0, "Crossette Fireworks": 0}
+all_done = False
 
 while effects and explosive_power:
 
@@ -30,7 +31,11 @@ while effects and explosive_power:
         effects.append(effect)
         explosive_power.append(power)
 
-if fireworks["Palm Fireworks"] >= 3 and fireworks["Willow Fireworks"] >= 3 and fireworks["Crossette Fireworks"] >= 3:
+    if fireworks["Palm Fireworks"] > 2 and fireworks["Willow Fireworks"] > 2 and fireworks["Crossette Fireworks"] > 2:
+        all_done = True
+        break
+
+if all_done:
     print("Congrats! You made the perfect firework show!")
 else:
     print("Sorry. You can't make the perfect firework show.")
