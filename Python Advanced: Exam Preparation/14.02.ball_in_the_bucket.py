@@ -9,7 +9,7 @@ for _ in range(SIZE):
     board.append(input().split())
 
 for throw in range(3):
-    coordinates = input()
+    coordinates = input().strip("(").strip(")")
     r = int(coordinates[0])
     c = int(coordinates[1])
 
