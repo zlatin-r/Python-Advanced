@@ -24,7 +24,7 @@ if 100 <= scored_points <= 199:
 elif 200 <= scored_points <= 299:
     prices.append("Teddy Bear")
 elif 300 <= scored_points:
-    prices.append("Lego Constructor Set")
+    prices.append("Lego Construction Set")
 
 if prices:
     print(f"Good job! You scored {scored_points} points, and you've won {prices[0]}.")
