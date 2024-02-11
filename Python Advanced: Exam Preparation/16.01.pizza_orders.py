@@ -22,7 +22,7 @@ while orders and employees:
         total_pizzas += order
     else:
         order -= employee_capacity
-        total_pizzas += order
+        total_pizzas += employee_capacity
         orders.appendleft(order)
 
 if not orders:
