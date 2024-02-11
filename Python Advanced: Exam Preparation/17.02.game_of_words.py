@@ -1,18 +1,18 @@
 word = input()
 
 SIZE = int(input())
-filed = []
+field = []
 
 start_pos = (0, 0)
 
 for row in range(SIZE):
-    filed.append(input().split())
+    field.append(list(input()))
 
-    if "P" in filed[row]:
-        start_pos = row, filed[row].index("P")
+    if "P" in field[row]:
+        start_pos = row, field[row].index("P")
 
 r, c = start_pos[0], start_pos[1]
-filed[r][c] = "-"
+field[r][c] = "-"
 
 directions = {
     "up": (-1, 0),
@@ -24,16 +24,22 @@ directions = {
 commands = int(input())
 
 for _ in range(commands):
-    r, c = directions[input()]
+    command = input()
+
+    r += directions[command][0]
+    c += directions[command][1]
 
     if 0 <= r < SIZE and 0 <= c < SIZE:
-        symbol = filed[r][c]
+        symbol = field[r][c]
 
         if symbol.isalpha():
             word += symbol
-            filed[r][c] = "-"
+            field[r][c] = "-"
 
     else:
         word = word[:-1]
 
+field[r][c] = "P"
+
 print(word)
+[print(''.join(row)) for row in field]
