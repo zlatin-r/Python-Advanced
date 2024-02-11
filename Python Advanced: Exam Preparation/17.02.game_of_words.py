@@ -37,6 +37,8 @@ for _ in range(commands):
             field[r][c] = "-"
 
     else:
+        r -= directions[command][0]
+        c -= directions[command][1]
         word = word[:-1]
 
 field[r][c] = "P"
