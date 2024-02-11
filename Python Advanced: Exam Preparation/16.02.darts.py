@@ -1,4 +1,5 @@
 from collections import deque
+
 SIZE = 7
 dartboard = []
 
