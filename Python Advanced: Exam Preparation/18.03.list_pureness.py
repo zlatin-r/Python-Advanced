@@ -1,15 +1,12 @@
 def best_list_pureness(*args):
-    numbers = args[0]
-    num = args[1]
+    numbers, num = args[0], args[1]
 
-    best_pureness = 0
-    rotations = 0
-    rotation_sum = 0
+    best_pureness, rotations, rotation_sum = 0, 0, 0
 
     for i in range(num):
 
         for el in numbers:
-            rotation_sum += el * numbers.index(el)
+            rotation_sum += numbers.index(el) * el
 
         if rotation_sum > best_pureness:
             best_pureness = rotation_sum
