@@ -15,15 +15,18 @@ directions = {
 }
 
 for _ in range(bombs):
-    r, c = map(int, (input().strip("(").strip(")").split(", ")))
-    field[r][c] = "*"
+    bomb_pos_r, bomb_pos_c = map(int, (input().strip("(").strip(")").split(", ")))
+    field[bomb_pos_r][bomb_pos_c] = "*"
 
-for row in range(SIZE):
-    for col in range(SIZE):
+for r in range(SIZE):
+    for c in range(SIZE):
 
-        if field[row][col] == 0:
+        if field[r][c] == 0:
             mine_count = 0
             for direction in directions:
+
+                row = r
+                col = c
 
                 row += directions[direction][0]
                 col += directions[direction][1]
@@ -33,6 +36,4 @@ for row in range(SIZE):
                     if field[row][col] == "*":
                         mine_count += 1
 
-            field[row][col] = mine_count
-
-print(*field, sep="\n")
+[print(*row) for row in field]
