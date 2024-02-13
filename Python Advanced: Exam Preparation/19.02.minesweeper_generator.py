@@ -36,4 +36,6 @@ for r in range(SIZE):
                     if field[row][col] == "*":
                         mine_count += 1
 
+            field[r][c] = mine_count
+
 [print(*row) for row in field]
