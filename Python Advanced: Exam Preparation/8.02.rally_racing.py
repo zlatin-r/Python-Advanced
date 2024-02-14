@@ -22,7 +22,6 @@ directions = {
 for row in range(SIZE):
     race_route.append(input().split())
 
-
 while True:
     command = input()
 
