@@ -1,8 +1,7 @@
 def find_tunnel_exit(matrix):
     for row in range(SIZE):
-        for col in range(SIZE):
-            if matrix[row][col] == "T":
-                return row, col
+        if "T" in matrix[row]:
+            return row, matrix[row].index("T")
 
 
 SIZE = int(input())
