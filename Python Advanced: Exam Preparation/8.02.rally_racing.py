@@ -1,6 +1,6 @@
 def find_tunnel_exit(matrix):
-    for row in range(len(matrix)):
-        for col in range(len(matrix)):
+    for row in range(SIZE):
+        for col in range(SIZE):
             if matrix[row][col] == "T":
                 return row, col
 
