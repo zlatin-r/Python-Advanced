@@ -6,8 +6,8 @@ def find_tunnel_exit(matrix):
 
 SIZE = int(input())
 racing_num = int(input())
+race_route = [input().split() for _ in range(SIZE)]
 
-race_route = []
 kilometers_passed = 0
 r, c = 0, 0
 
@@ -17,9 +17,6 @@ directions = {
     "left": (0, -1),
     "right": (0, 1),
 }
-
-for row in range(SIZE):
-    race_route.append(input().split())
 
 while True:
     command = input()
