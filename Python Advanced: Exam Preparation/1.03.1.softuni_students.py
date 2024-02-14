@@ -9,11 +9,11 @@ def softuni_students(*args, **kwargs):
         else:
             invalid_students.append(username)
 
-    if invalid_students:
-        users_data.append(f"!!! Invalid course students: {', '.join(invalid_students)}")
-
-    for student in users_data:
+    for student in sorted(users_data):
         result += f"{student}\n"
+
+    if invalid_students:
+        result += f"!!! Invalid course students: {', '.join(sorted(invalid_students))}"
 
     return result
 
