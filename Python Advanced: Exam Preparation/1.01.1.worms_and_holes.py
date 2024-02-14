@@ -23,7 +23,7 @@ while worms and holes:
 if matches:
     print(f"Matches: {matches}")
 else:
-    print("There is no matches.")
+    print("There are no matches.")
 
 if not worms and all_fit:
     print("Every worm found a suitable hole!")
