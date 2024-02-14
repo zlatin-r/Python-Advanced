@@ -31,6 +31,7 @@ while True:
 
     r += directions[command][0]
     c += directions[command][1]
+
     pos = race_route[r][c]
 
     if pos == ".":
