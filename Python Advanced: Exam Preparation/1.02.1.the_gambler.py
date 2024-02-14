@@ -55,5 +55,5 @@ while True:
 
 board[r][c] = "G"
 
-if money:
+if money > 0:
     [print("".join(row)) for row in board]
