@@ -1,7 +1,7 @@
 SIZE = int(input())
 
 fishing_area = []
-ship_pos = []
+r, c = [0, 0]
 collected_fish = 0
 
 directions = {
@@ -15,23 +15,18 @@ for row in range(SIZE):
     fishing_area.append(list(input()))
 
     if "S" in fishing_area[row]:
-        ship_pos = row, fishing_area[row].index("S")
-        fishing_area[ship_pos[0]][ship_pos[1]] = "-"
+        r, c = row, fishing_area[row].index("S")
+        fishing_area[r][c] = "-"
 
 command = input()
 while command != "collect the nets":
 
-    r = ship_pos[0] + directions[command][0]
-    c = ship_pos[1] + directions[command][1]
+    r += directions[command][0]
+    c += directions[command][1]
 
-    if r >= SIZE:
-        r = 0
-    elif r < 0:
-        r = SIZE - 1
-    elif c >= SIZE:
-        c = 0
-    elif c < 0:
-        c = SIZE - 1
+    if not (0 <= r < SIZE and 0 <= c < SIZE):
+        r = (r % SIZE)
+        c = (c % SIZE)
 
     if fishing_area[r][c].isdigit():
         collected_fish += int(fishing_area[r][c])
@@ -41,11 +36,9 @@ while command != "collect the nets":
         exit()
 
     fishing_area[r][c] = "-"
-
-    ship_pos = r, c
     command = input()
 
-fishing_area[ship_pos[0]][ship_pos[1]] = "S"
+fishing_area[r][c] = "S"
 
 if collected_fish >= 20:
     print("Success! You managed to reach the quota!")
