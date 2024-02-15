@@ -12,7 +12,7 @@ while worms and holes:
 
     if curr_worm == curr_hole:
         matches += 1
-    elif curr_worm != curr_hole:
+    else:
         curr_worm -= 3
 
         if curr_worm > 0:
