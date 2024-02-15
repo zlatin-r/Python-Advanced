@@ -12,6 +12,8 @@ def gather_credits(credits_needed, *args):
     else:
         return f"You need to enroll in more courses! You have to gather {credits_needed - collected_credits} credits more."
 
+# Time used: 0.120 s
+
 
 print(gather_credits(
     60,
