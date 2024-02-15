@@ -1,6 +1,6 @@
 SIZE = int(input())
-
 fishing_area = []
+
 r, c = [0, 0]
 collected_fish = 0
 
