@@ -2,8 +2,8 @@ from collections import deque
 
 worms = [int(x) for x in input().split()]
 holes = deque([int(x) for x in input().split()])
-total_worms = len(worms)
 
+total_worms = len(worms)
 matches = 0
 
 while worms and holes:
