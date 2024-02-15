@@ -20,10 +20,9 @@ for row in range(SIZE):
 
 command = input()
 while command != "collect the nets":
-    r, c = [
-        ship_pos[0] + directions[command][0],
-        ship_pos[1] + directions[command][1]
-    ]
+
+    r = ship_pos[0] + directions[command][0]
+    c = ship_pos[1] + directions[command][1]
 
     if r >= SIZE:
         r = 0
