@@ -28,7 +28,7 @@ print(cookbook(
     ("Tacos", "Mexican", ["tortillas", "ground beef", "lettuce", "tomato", "cheese"]),
     ("Pad Thai", "Thai", ["rice noodles", "shrimp", "peanuts", "bean sprouts", "tamarind sauce"]),
     ("Chicken Alfredo", "Italian", ["fettuccine", "chicken", "alfredo sauce", "broccoli"])))
-print("---")
+
 print(cookbook(
     ("Spaghetti Bolognese", "Italian", ["spaghetti", "tomato sauce", "ground beef"]),
     ("Margherita Pizza", "Italian", ["pizza dough", "tomato sauce", "mozzarella"]),
@@ -36,11 +36,11 @@ print(cookbook(
     ("Croissant", "French", ["flour", "butter", "yeast"]),
     ("Ratatouille", "French", ["eggplant", "zucchini", "tomatoes"])
 ))
-print("----")
+
 print(cookbook(
     ("Pad Thai", "Thai", ["rice noodles", "shrimp", "peanuts", "bean sprouts", "tamarind sauce"])
 ))
-print("----")
+
 print(cookbook(
     ("Spaghetti Bolognese", "Italian", ["spaghetti", "tomato sauce", "ground beef"]),
     ("Margherita Pizza", "Italian", ["pizza dough", "tomato sauce", "mozzarella"]),
