@@ -26,6 +26,3 @@ elif eaten_food == 1:
     print(f"Henry ate: {eaten_food} food.")
 else:
     print("Henry remained hungry. He will try next weekend again.")
-
-
-
